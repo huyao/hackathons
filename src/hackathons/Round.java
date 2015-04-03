@@ -23,13 +23,15 @@ public class Round {
 	    	while(firsttAttacker.getAttack() > attackTime || secondAttacker.getAttack() > attackTime){ 
 	    		if(firsttAttacker.getAttack() > attackTime){
 	    			firsttAttacker.attack(secondAttacker);
-	    			if(secondAttacker.getHealth() < 0){
+	    			if(secondAttacker.getHealth() < 0){		
+	    				firsttAttacker.win();
 	    				break;
 	    			}
 	    		}
 	    		if(secondAttacker.getAttack() > attackTime){
 	    			secondAttacker.attack(firsttAttacker);
 	    			if(firsttAttacker.getHealth() < 0){
+	    				secondAttacker.win();
 	    				break;
 	    			}
 	    		}

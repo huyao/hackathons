@@ -92,9 +92,7 @@ public class Player {
 		defender.setHealth(defender.getHealth() - getDamage());
 		System.out.println("Candidate 1:"+getName() + " hits candidate "
 		   +defender.getName() + " for "+getDamage() +"("+currentDefenderHealth+"->"+defender.getHealth()+")");
-		if(defender.getHealth() < 0){
-			this.win();
-		}
+		
 	}
 
 	public int getMaxHealth() {
